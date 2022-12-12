@@ -1,0 +1,74 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+:root
+{
+    --blanco: #eee;
+    --negro: #000;
+}
+
+.btn, li, .navbar-brand, .form-control
+{
+    font-size: 2rem;
+}
+
+body
+{
+    background-color: var(--blanco);
+}
+
+#side_nav
+{
+    background: var(--negro);
+    min-width: 25rem;
+    max-width: 25rem;
+    transition: all 0.5s;
+}
+
+.content
+{
+    min-height: 100vh;
+    width: 100%;
+}
+
+hr.h-color
+{
+    background: var(--blanco);
+    opacity: 0.75;
+}
+
+.sidebar li.active
+{
+    background: var(--blanco);
+    border-radius: 0.8em;
+}
+
+.sidebar li.active a, .sidebar li.active a:hover
+{
+    color: var(--negro);
+}
+
+.sidebar li a
+{
+    color: var(--blanco);
+}
+
+@media(max-width: 767px)
+{
+    #side_nav
+    {
+        margin-left: -25rem;
+        position: fixed;
+        min-height: 100vh;
+        z-index: 1;
+    }
+    #side_nav.active
+    {
+        margin-left: 0;
+    }
+}
